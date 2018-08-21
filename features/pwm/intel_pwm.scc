@@ -1,0 +1,7 @@
+
+define KFEATURE_DESCRIPTION "Enable Intel PWM Devices"
+define KFEATURE_COMPATIBILITY board
+
+include pwm.scc
+
+kconf hardware intel_pwm.cfg

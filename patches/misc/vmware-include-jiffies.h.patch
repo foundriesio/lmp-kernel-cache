@@ -1,0 +1,22 @@
+From 7a56b950120835542279282b5a5eb05d50fc39cc Mon Sep 17 00:00:00 2001
+From: Bruce Ashfield <bruce.ashfield@windriver.com>
+Date: Thu, 19 Aug 2010 13:57:50 -0400
+Subject: [PATCH] vmware: include jiffies.h
+
+Signed-off-by: Bruce Ashfield <bruce.ashfield@windriver.com>
+
+diff --git a/arch/x86/kernel/cpu/vmware.c b/arch/x86/kernel/cpu/vmware.c
+index 1ff0598d309c..30b5a00c00d4 100644
+--- a/arch/x86/kernel/cpu/vmware.c
++++ b/arch/x86/kernel/cpu/vmware.c
+@@ -21,6 +21,7 @@
+  *
+  */
+ 
++#include <linux/jiffies.h>
+ #include <linux/dmi.h>
+ #include <linux/init.h>
+ #include <linux/export.h>
+-- 
+2.10.1
+

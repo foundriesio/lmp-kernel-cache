@@ -1,0 +1,4 @@
+if [ "$KARCH" = "arm" ]; then
+	kconf hardware arm.cfg
+	include cfg/timer/hz_100.scc
+fi

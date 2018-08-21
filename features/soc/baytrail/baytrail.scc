@@ -1,0 +1,17 @@
+# baytrail.scc
+#
+# Features and devices found on the Bay Trail SoCs
+#
+
+include cfg/8250.scc
+include features/i915/i915.scc
+include features/power/intel.scc
+
+include features/usb/xhci-hcd.scc
+include features/usb/ehci-hcd.scc
+include features/usb/designware-usb3.scc
+include features/intel-pinctrl/intel-pinctrl.scc
+
+include features/mei/mei-txe.scc
+
+kconf hardware baytrail.cfg

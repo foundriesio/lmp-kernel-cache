@@ -1,0 +1,16 @@
+# PCI
+include features/pci/pci.scc
+
+# USB
+# theses are are modules in the Quark setup
+include features/usb/ehci-hcd.scc
+
+# Networking
+include features/net/stmicro/stmmac.scc
+
+# Subsystems and interfaces
+include features/i2c/i2cdev.scc
+include features/leds/leds.scc
+include features/spi/spidev.scc
+
+kconf hardware x1000.cfg
