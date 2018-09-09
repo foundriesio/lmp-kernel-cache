@@ -1,0 +1,4 @@
+define KFEATURE_DESCRIPTION "Enable Bootup Logo"
+define KFEATURE_COMPATIBILITY board
+
+kconf hardware logo.cfg

@@ -1,0 +1,4 @@
+define KFEATURE_DESCRIPTION "Enable support HID"
+define KFEATURE_COMPATIBILITY all
+
+kconf hardware hid.cfg

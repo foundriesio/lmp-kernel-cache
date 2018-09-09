@@ -1,0 +1,6 @@
+define KFEATURE_DESCRIPTION "Enable UART Bluetooth hardware modules"
+define KFEATURE_COMPATIBILITY board
+
+include bluetooth.scc
+
+kconf hardware bluetooth-uart.cfg

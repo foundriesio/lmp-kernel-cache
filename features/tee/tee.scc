@@ -1,0 +1,4 @@
+define KFEATURE_DESCRIPTION "Enable support for Trusted Execution Environment"
+define KFEATURE_COMPATIBILITY board
+
+kconf hardware tee.cfg

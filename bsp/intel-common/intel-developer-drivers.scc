@@ -1,3 +1,0 @@
-# Additional features for developer bsps
-include features/latencytop/latencytop.scc
-include features/profiling/profiling.scc

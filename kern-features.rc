@@ -173,7 +173,7 @@
 	config = cfg/efi-ext.scc
 	config = cfg/8250.scc
 	config = cfg/boot-live.scc
-	config = cfg/timer/no_hz.scc
+	config = cfg/timer/no_hz_idle.scc
 	config = cfg/timer/hz_100.scc
 	config = cfg/timer/hz_1000.scc
 	config = cfg/timer/hpet.scc

@@ -1,31 +1,25 @@
 0.0 Submitting Patches
 ======================
 
-Patches to the kernel meta data should be submitted to the linux-yocto
-mailing list (subscripion only) and should cc' the maintainer.
+Patches to the kernel meta data should be submitted to the linux-lmp
+maintainer.
 
-  list: https://lists.yoctoproject.org/listinfo/linux-yocto
-  Maintainers: Bruce Ashfield <bruce.ashfield@gmail.com>
+  Maintainers: Ricardo Salveti <ricardo@foundries.io>
 
 When sending single patches, please using something like:
 
-  $ git send-email -1 --to linux-yocto@yoctoproject.org --subject-prefix='kernel-cache][PATCH'
+  $ git send-email -1 --to ricardo@foundries.io --subject-prefix='kernel-cache][PATCH'
+
 
 1.0 Overview
 ============
 
-The linux-yocto kernel is composed of additions/modifications to the
-kernel.org source, plus configuration/control data to manage and use those
-changes.
+The linux-lmp kernel is composed of the unified kernel source tree, plus
+configuration/control data to manage how the configs are applied.
 
-Source code changes are seen as git commits to the kernel source tree, are
-arranged into features (sometimes) separated by branches and marked by tags.
-
-The configuration and control data is contained within a separate branch from
-source changes called the meta branch. The configuration data is contained
-within the kernel-cache directory structure, and represents the instructions
-to modify the source tree and the configuration policies required to configure
-and build the kernel.
+The configuration data is contained within the kernel-cache directory
+structure, and represents the instructions to modify the source tree
+and the configuration policies required to configure and build the kernel.
 
 While changes to the source code have already been applied to the tree, the
 control and configuration data is used before and during the kernel build
@@ -33,7 +27,9 @@ process to generate a valid kernel config.
 
 This README explains the configuration data and policies around the
 organization of this information, it is not a guide to tree construction, scc
-file syntax or linux-yocto architecture.
+file syntax or linux-lmp architecture.
+
+This repository is largely based on the upstream yocto-kernel-cache tree.
 
 2.0 Configuration Policy
 ========================
@@ -50,10 +46,6 @@ purposes:
 
   - Creates a baseline configuration that can be inherited/included to result
     in consistent configuration across all derived kernel builds
-
-  - Groups patches and their configuration data into documented features. The
-    proper configuration and enablement of a kernel change is coupled with the
-    patches that make the change to the source.
 
   - Creates named feature fragments that when included enable the required
     options to implement a specific behaviour (i.e. USB boot)
@@ -84,18 +76,18 @@ fundamental incompatibility between these features and others in the system.
 
 Note: ktypes or KTYPES are seen as "define KTYPE <name>" in .scc files, and
 are part of a BSP definition.
- 
+
 There are often significant differences between kernel types in the following
 ways:
 
-  - source code: large or invasive features that cannot be cleanly disabled, 
-    or that cannot co-exist with other features at a source code level are 
+  - source code: large or invasive features that cannot be cleanly disabled,
+    or that cannot co-exist with other features at a source code level are
     separated by kernel type. The preempt-rt patches, alternate schedulers,
-    grsecurity, are some examples of patches that are important parts of 
+    grsecurity, are some examples of patches that are important parts of
     kernel type definition.
 
   - behaviour: A kernel type defines a default behaviour, which is often a
-    trade off against other options. 
+    trade off against other options.
 
        - performance vs. determinism
        - security vs. flexibility
@@ -105,7 +97,7 @@ ways:
     are all common parts of behavioural differences between kernel types.
 
   - feature support: different kernel types support different sets of features,
-    such as XIP or different block schedulers, tracers, network devices and 
+    such as XIP or different block schedulers, tracers, network devices and
     power management.
 
   - board support: due to the source, behaviour and feature differences between
@@ -160,7 +152,7 @@ These often contain bug fixes, backports or other small changes to the kernel
 tree, and do not typically contain any kernel configuration fragments.
 Configuration fragments are not required, since they are fixing bugs, or
 adding simple functionality that does not need Kconfig options to be
-enabled. 
+enabled.
 
 Patches are normally arranged into a directory structure that makes their
 maintenance and carry forward easier and are found under "patches/*" in
@@ -172,15 +164,15 @@ the directory structure.
 Config features are collections of configuration options that when included
 enable a specific behaviour or functionality. Configuration features do not
 contain patches, and can be included multiple times by any other feature or
-kernel type. 
+kernel type.
 
 The impact of configuration groups is additive, and order matters, since the
 last included config group can override the behaviour of previous includes.
 
 Pure Config features are found under "cfg/*" in the directory structure, and
-are named <$config_feature>.scc. 
+are named <$config_feature>.scc.
 
-Configuration fragments are the actual input to the linux kernel 
+Configuration fragments are the actual input to the linux kernel
 configuration subsystem and are included by config features. Configuration
 fragments are found throughout the tree, and are ".cfg" files.
 
@@ -224,7 +216,7 @@ desired functionality.
 The BSP .scc files combine the policy from the kernel type with the
 hardware requirements of the machine into a single place. This file
 describes all the source code changes from patches and features and the
-configuration changes that are used to configure and build the kernel. 
+configuration changes that are used to configure and build the kernel.
 
 There is one BSP description per kernel type that is located by a build
 system when it starts the process of configuring and build a kernel for a
@@ -241,23 +233,3 @@ include feature and config fragments to define non-hardware configuration and
 functionality. New or local configuration values introduced by a BSP should
 not override non-hardware (or policy) values unless absolutely necessary, but
 always should define the hardware they support.
-
-2.5 Staged Features
--------------------
-
-It is often desirable to manage some features independently from other
-features in the tree to allow clean upstream fix integration and to avoid
-managing large numbers of patches and contributions. These branches are
-called "staged" features, and are included by BSP definitions by merging the
-topic branch in their board description.
-
-    git merge emgd-1.14
-
-is an example of merging a staged emgd feature into a BSP branch via a git
-operation.
-
-2.6 References
---------------
-
-  git://git.yoctoproject.org/yocto-kernel-cache
-

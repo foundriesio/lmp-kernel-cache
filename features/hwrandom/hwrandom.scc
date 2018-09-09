@@ -1,0 +1,4 @@
+define KFEATURE_DESCRIPTION "Enable support for Hardware Random"
+define KFEATURE_COMPATIBILITY all
+
+kconf hardware hwrandom.cfg

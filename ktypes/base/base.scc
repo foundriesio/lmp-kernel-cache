@@ -1,5 +1,2 @@
-define KERNEL_VERSION 3.8
-
 # Force the base configuration
-
 force kconf non-hardware base.cfg
