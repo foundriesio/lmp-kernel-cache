@@ -1,0 +1,7 @@
+define KMACHINE cubox-i
+define KARCH arm
+define KTYPE standard
+
+include ktypes/standard/standard.scc
+
+include cubox-i.scc
