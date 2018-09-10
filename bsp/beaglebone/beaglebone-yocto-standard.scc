@@ -1,0 +1,7 @@
+define KMACHINE beaglebone-yocto
+define KARCH arm
+define KTYPE standard
+
+include ktypes/standard/standard.scc
+
+include beaglebone.scc
