@@ -1,0 +1,7 @@
+define KMACHINE freedom-u540
+define KARCH riscv64
+define KTYPE standard
+
+include ktypes/standard/standard.scc
+
+include freedom-u540.scc
