@@ -1,0 +1,7 @@
+define KMACHINE raspberrypi0-wifi
+define KARCH arm
+define KTYPE standard
+
+include ktypes/standard/standard.scc
+
+include raspberrypi0-wifi.scc
