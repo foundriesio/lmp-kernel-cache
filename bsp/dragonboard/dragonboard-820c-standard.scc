@@ -1,0 +1,7 @@
+define KMACHINE dragonboard-820c
+define KARCH aarch64
+define KTYPE standard
+
+include ktypes/standard/standard.scc
+
+include dragonboard-820c.scc
