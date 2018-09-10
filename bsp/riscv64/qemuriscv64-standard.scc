@@ -1,0 +1,13 @@
+define KMACHINE qemuriscv64
+define KARCH riscv64
+define KTYPE standard
+
+include ktypes/standard/standard.scc
+
+include features/bluetooth/bluetooth.scc
+include features/bluetooth/bluetooth-usb.scc
+include features/bluetooth/bluetooth-uart.scc
+include features/ieee802154/ieee802154.scc
+include features/mac802154/mac802154.scc
+
+include qemuriscv64.scc

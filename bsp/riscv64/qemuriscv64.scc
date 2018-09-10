@@ -1,0 +1,9 @@
+include cfg/paravirt_kvm.scc
+include cfg/virtio.scc
+include features/vfio/vfio.scc
+
+include cfg/usb-mass-storage.scc
+
+include arch/riscv64/riscv64.scc
+
+kconf hardware qemuriscv64.cfg
