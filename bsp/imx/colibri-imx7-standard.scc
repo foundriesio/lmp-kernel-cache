@@ -1,0 +1,7 @@
+define KMACHINE colibri-imx7
+define KARCH arm
+define KTYPE standard
+
+include ktypes/standard/standard.scc
+
+include colibri-imx7.scc
