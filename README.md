@@ -1,18 +1,11 @@
-0.0 Submitting Patches
-======================
+Submitting Patches
+==================
 
-Patches to the kernel meta data should be submitted to the linux-lmp
-maintainer.
+Patches to the Linux microPlatform kernel meta data should be submitted as a
+merge request to the https://github.com/foundriesio/lmp-kernel-cache repository.
 
-  Maintainers: Ricardo Salveti <ricardo@foundries.io>
-
-When sending single patches, please using something like:
-
-  $ git send-email -1 --to ricardo@foundries.io --subject-prefix='kernel-cache][PATCH'
-
-
-1.0 Overview
-============
+Overview
+========
 
 The linux-lmp kernel is composed of the unified kernel source tree, plus
 configuration/control data to manage how the configs are applied.
@@ -31,8 +24,8 @@ file syntax or linux-lmp architecture.
 
 This repository is largely based on the upstream yocto-kernel-cache tree.
 
-2.0 Configuration Policy
-========================
+Configuration Policy
+====================
 
 The configuration data contained within the meta branch has the following
 purposes:
@@ -60,8 +53,8 @@ configuration. This allows for flexible modification and extension of the
 base policy. Also, if a previously defined BSP configuration is modified, it
 can be audited against the software policy to generate a compliance report.
 
-2.1 Kernel Types (ktypes)
--------------------------
+Kernel Types (ktypes)
+---------------------
 
 Kernel types (ktypes) are the highest level policy containers and represent
 a significant set of kernel functionality that has been grouped (and named)
@@ -118,8 +111,8 @@ below:
     +--- tiny: base functionality + few additional features with a small footprint
 
 
-2.2 Kernel Features
---------------------
+Kernel Features
+---------------
 
 Kernel features are named containers for changes to the kernel (via patches
 and/or configuration) that implement or enable a defined feature. A feature
@@ -158,8 +151,8 @@ Patches are normally arranged into a directory structure that makes their
 maintenance and carry forward easier and are found under "patches/*" in
 the directory structure.
 
-2.3 Config Features
---------------------
+Config Features
+---------------
 
 Config features are collections of configuration options that when included
 enable a specific behaviour or functionality. Configuration features do not
@@ -210,8 +203,8 @@ configuration only has a single option in a single config group, but make it
 more difficult to determine the right set of groups to include for the
 desired functionality.
 
-2.4 BSPs (Board Support Package)
---------------------------------
+BSPs (Board Support Package)
+----------------------------
 
 The BSP .scc files combine the policy from the kernel type with the
 hardware requirements of the machine into a single place. This file
