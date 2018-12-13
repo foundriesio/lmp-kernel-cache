@@ -54,6 +54,9 @@ include features/hostapd/hostapd.scc
 # Media device support
 include features/media/media.scc
 
+# TPM
+include features/tpm/tpm.scc
+
 # Intel HD Audio
 include features/sound/snd_hda_intel.scc
 
