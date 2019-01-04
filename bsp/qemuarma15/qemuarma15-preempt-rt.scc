@@ -1,0 +1,13 @@
+# SPDX-License-Identifier: MIT
+define KMACHINE qemuarma15
+define KTYPE preempt-rt
+define KARCH arm
+
+# no new branch required, re-use the ktypes/preempt-rt/preempt-rt.scc branch
+include ktypes/preempt-rt/preempt-rt.scc
+
+include cfg/virtio.scc
+include cfg/dmaengine.scc
+include cfg/timer/rtc.scc
+include qemuarma15.scc
+
