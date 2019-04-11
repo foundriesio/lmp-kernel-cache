@@ -1,1 +1,2 @@
 kconf hardware riscv64.cfg
+include cfg/timer/hz_100.scc
