@@ -1,6 +1,5 @@
 include cfg/paravirt_kvm.scc
 include cfg/virtio.scc
-include features/vfio/vfio.scc
 
 include cfg/usb-mass-storage.scc
 
