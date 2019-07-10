@@ -1,0 +1,5 @@
+include features/crypto/arm-crypto.scc
+
+include raspberrypi3-common.scc
+
+kconf hardware raspberrypi3.cfg
