@@ -1,0 +1,5 @@
+include raspberrypi-common.scc
+
+include features/pci/pci.scc
+
+kconf hardware raspberrypi4-common.cfg
