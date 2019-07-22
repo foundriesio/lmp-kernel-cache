@@ -1,0 +1,7 @@
+define KMACHINE raspberrypi4-64
+define KARCH aarch64
+define KTYPE standard
+
+include ktypes/standard/standard.scc
+
+include raspberrypi4-64.scc
