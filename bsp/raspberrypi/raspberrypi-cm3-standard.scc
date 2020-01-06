@@ -1,0 +1,7 @@
+define KMACHINE raspberrypi-cm3
+define KARCH arm
+define KTYPE standard
+
+include ktypes/standard/standard.scc
+
+include raspberrypi3.scc
