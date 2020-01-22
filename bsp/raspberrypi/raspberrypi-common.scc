@@ -31,6 +31,7 @@ include features/spi/spidev.scc
 
 # Miscellaneous
 include cfg/dmaengine.scc
+include features/can/can.scc
 include features/hid/hid.scc
 include features/input/input.scc
 include features/input/touchscreen.scc
