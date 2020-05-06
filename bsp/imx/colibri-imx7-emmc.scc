@@ -48,4 +48,4 @@ include cfg/usb-mass-storage.scc
 
 kconf hardware imx7s.cfg
 kconf hardware imx7d.cfg
-kconf hardware colibri-imx7.cfg
+kconf hardware colibri-imx7-emmc.cfg
