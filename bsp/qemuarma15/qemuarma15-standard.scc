@@ -4,9 +4,6 @@ define KTYPE standard
 define KARCH arm
 
 include ktypes/standard/standard.scc
-# we aren't carrying patches specific to this platform, so let's
-# skip the branch for now.
-# branch qemuarma15
 
 include features/bluetooth/bluetooth.scc
 include features/bluetooth/bluetooth-usb.scc
