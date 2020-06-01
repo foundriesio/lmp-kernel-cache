@@ -11,8 +11,5 @@ include features/bluetooth/bluetooth-uart.scc
 include features/ieee802154/ieee802154.scc
 include features/mac802154/mac802154.scc
 
-include cfg/virtio.scc
-include cfg/dmaengine.scc
-include cfg/timer/rtc.scc
 include qemuarma15.scc
 
