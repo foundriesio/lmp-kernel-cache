@@ -50,6 +50,9 @@ include features/rfkill/rfkill.scc
 include features/bpf/bpf.scc
 include features/hwrandom/hwrandom.scc
 
+# foundries factory compatibility
+include features/net/wireguard.scc
+
 # debug
 include features/debug/debug-lockup.scc
 include cgl/features/pstore/pstore.scc
