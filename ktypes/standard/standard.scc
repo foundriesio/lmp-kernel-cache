@@ -52,6 +52,7 @@ include features/hwrandom/hwrandom.scc
 
 # debug
 include features/debug/debug-lockup.scc
+include cfg/debug/misc/debug-panic-oops.scc
 include cgl/features/pstore/pstore.scc
 include features/profiling/profiling.scc
 include features/debug/printk.scc
