@@ -1,0 +1,8 @@
+# SPDX-License-Identifier: MIT
+define KMACHINE uz3eg-iocc
+define KTYPE standard
+define KARCH arm64
+
+include ktypes/standard/standard.scc
+
+include uz3eg-iocc.scc
