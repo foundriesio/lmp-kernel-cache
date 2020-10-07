@@ -27,6 +27,9 @@ include cfg/virtio.scc
 include features/vfio/vfio.scc
 include features/kvm/qemu-kvm-enable.scc
 
+# CONFIG_X86_X2APIC is 64-bit
+include features/x2apic/x2apic.scc
+
 # This line comes last as it has the final word on
 # CONFIG values.
 kconf hardware intel-corei7-64.cfg
