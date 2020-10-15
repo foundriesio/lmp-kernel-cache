@@ -1,0 +1,7 @@
+define KMACHINE stm32mp1-eval
+define KARCH arm
+define KTYPE standard
+
+include ktypes/standard/standard.scc
+
+include stm32mp1-eval.scc
