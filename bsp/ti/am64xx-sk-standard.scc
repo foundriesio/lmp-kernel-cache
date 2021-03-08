@@ -1,0 +1,7 @@
+define KMACHINE am64xx-sk
+define KARCH aarch64
+define KTYPE standard
+
+include ktypes/standard/standard.scc
+
+include ti-common.scc
