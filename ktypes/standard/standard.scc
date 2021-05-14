@@ -64,3 +64,4 @@ include cfg/debug/sched/debug-schedstats.scc
 
 # security
 include features/security/security.scc
+include cfg/crypto-obsolete-disable.scc
