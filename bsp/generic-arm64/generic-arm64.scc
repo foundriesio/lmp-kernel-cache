@@ -19,6 +19,7 @@ include features/kvm/qemu-kvm-enable.scc
 include features/usb/xhci-hcd.scc
 include features/usb/ehci-hcd.scc
 include features/usb/ohci-hcd.scc
+include features/usb/usb-typec.scc
 
 include features/mmc/mmc-sdhci.scc
 
