@@ -48,6 +48,9 @@ include features/iwlwifi/iwlwifi.scc
 include features/iwlegacy/iwlegacy.scc
 include features/i40e/i40e.scc
 
+# TPM
+include features/tpm/tpm.scc
+
 # Subsystems and interfaces
 include features/hugetlb/hugetlb.scc
 include features/i2c/i2cdev.scc
