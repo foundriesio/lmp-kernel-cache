@@ -1,0 +1,7 @@
+define KMACHINE orange-pi-r1
+define KARCH arm
+define KTYPE standard
+
+include ktypes/standard/standard.scc
+
+include orange-pi-r1.scc
