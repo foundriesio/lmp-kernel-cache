@@ -1,0 +1,3 @@
+include sun8i-common.scc
+
+kconf hardware orange-pi-r1.cfg
