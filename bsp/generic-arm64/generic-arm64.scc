@@ -8,6 +8,8 @@ kconf hardware bsp/common-pc/common-pc-gfx.cfg
 
 include features/pci/pci.scc
 
+include features/numa/numa.scc
+
 include features/iommu/iommu.scc
 
 # VIRT support
