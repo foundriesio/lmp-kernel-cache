@@ -1,0 +1,5 @@
+# SPDX-License-Identifier: MIT
+
+include versal.scc
+
+kconf hardware vck190-versal.cfg
