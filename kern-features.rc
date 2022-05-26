@@ -186,6 +186,7 @@
 	config = cfg/net/bridge.scc
 	config = cfg/net/ipv6.scc
 	config = cfg/vmware-guest.scc
+	config = cfg/net/mdio.scc
 	config = cfg/usb-mass-storage.scc
 	config = cfg/fs/ext4.scc
 	config = cfg/fs/devtmpfs.scc
