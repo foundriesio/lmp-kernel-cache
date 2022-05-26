@@ -13,6 +13,7 @@ include features/iommu/iommu.scc
 # VIRT support
 include cfg/paravirt_kvm.scc
 include cfg/virtio.scc
+include cfg/net/mdio.scc
 include features/vfio/vfio.scc
 include features/kvm/qemu-kvm-enable.scc
 
