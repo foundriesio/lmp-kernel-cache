@@ -46,4 +46,4 @@ include features/tee/tee.scc
 
 include cfg/usb-mass-storage.scc
 
-kconf hardware stm32mp1-eval.cfg
+kconf hardware stm32mp15-disco.cfg
