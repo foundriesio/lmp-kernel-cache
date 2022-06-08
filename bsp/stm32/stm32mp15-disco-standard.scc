@@ -4,4 +4,4 @@ define KTYPE standard
 
 include ktypes/standard/standard.scc
 
-include stm32mp1-disco.scc
+include stm32mp15-disco.scc
