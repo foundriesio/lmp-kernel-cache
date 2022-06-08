@@ -49,4 +49,4 @@ include cfg/usb-mass-storage.scc
 # Exclude x86/ACPI features
 include cfg/non-x86.cfg
 
-kconf hardware stm32mp1-eval.cfg
+kconf hardware stm32mp15-disco.cfg
