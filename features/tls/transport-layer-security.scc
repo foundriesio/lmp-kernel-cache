@@ -1,0 +1,4 @@
+define KFEATURE_DESCRIPTION "Enable TLS (Transport Layer Security)"
+define KFEATURE_COMPATIBILITY board
+
+kconf non-hardware transport-layer-security.cfg
