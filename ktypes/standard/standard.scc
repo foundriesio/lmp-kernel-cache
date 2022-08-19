@@ -28,6 +28,7 @@ include features/cgroups/cgroups.scc
 include features/net_sched/net_sched.scc
 include features/vdso/vdso.scc
 include features/taskstats/taskstats.scc
+include features/tls/transport-layer-security.scc
 
 include features/fuse/fuse.scc
 
