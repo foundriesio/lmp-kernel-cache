@@ -1,15 +1,5 @@
-include cfg/8250.scc
-
-kconf hardware bsp/common-pc/common-pc-drivers.cfg
-kconf hardware bsp/common-pc/common-pc-gfx.cfg
-
-include features/pci/pci.scc
-
-include features/usb/xhci-hcd.scc
 include features/usb/ehci-hcd.scc
 include features/usb/ohci-hcd.scc
-
-include features/mmc/mmc-sdhci.scc
 
 # Various RF/Wireless technologies
 include features/bluetooth/bluetooth.scc
