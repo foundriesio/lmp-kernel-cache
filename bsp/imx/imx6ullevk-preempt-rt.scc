@@ -1,0 +1,9 @@
+define KMACHINE imx6ullevk
+define KARCH arm
+define KTYPE preempt-rt
+
+include ktypes/standard/standard.scc
+
+include imx6ullevk.scc
+
+include ktypes/preempt-rt/preempt-rt.scc
