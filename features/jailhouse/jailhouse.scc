@@ -1,0 +1,4 @@
+define KFEATURE_DESCRIPTION "Kernel Jailhouse module requirements"
+define KFEATURE_COMPATIBILITY all
+
+kconf non-hardware jailhouse.cfg
