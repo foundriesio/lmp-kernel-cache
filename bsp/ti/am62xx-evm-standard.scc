@@ -4,4 +4,4 @@ define KTYPE standard
 
 include ktypes/standard/standard.scc
 
-include ti-common.scc
+include ti-arm64-common.scc
