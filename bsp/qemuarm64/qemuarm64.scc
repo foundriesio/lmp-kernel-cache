@@ -1,7 +1,42 @@
+include cfg/8250.scc
+include cfg/amba.scc
+
+kconf hardware bsp/common-pc/common-pc-drivers.cfg
+kconf hardware bsp/common-pc/common-pc-gfx.cfg
+
+include features/pci/pci.scc
+
+include features/numa/numa.scc
+
+include features/iommu/iommu.scc
+
+# VIRT support
 include cfg/paravirt_kvm.scc
 include cfg/virtio.scc
 include features/vfio/vfio.scc
+include features/kvm/qemu-kvm-enable.scc
 
+# TPM
+include features/tpm/tpm.scc
+
+# Media
+include cfg/sound.scc
+include features/media/media.scc
+include features/media/media-usb-webcams.scc
+
+# Miscellaneous
+include cfg/dmaengine.scc
+include cfg/efi-ext.scc
+include features/hid/hid.scc
+include features/input/input.scc
+include features/input/touchscreen.scc
+include features/input/keyboard-gpio.scc
+include features/usb/serial-all.scc
+include features/usb-net/usb-net.scc
+include features/usb/usb-gadgets.scc
+include features/crypto/arm64-crypto.scc
+include features/power/arm.scc
+include features/power/cpu-freq.scc
 include features/tee/tee.scc
 
 include cfg/usb-mass-storage.scc
