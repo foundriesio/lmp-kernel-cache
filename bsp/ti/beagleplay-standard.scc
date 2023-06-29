@@ -1,0 +1,9 @@
+define KMACHINE beagleplay
+define KARCH aarch64
+define KTYPE standard
+
+include ktypes/standard/standard.scc
+
+include ti-arm64-common.scc
+
+kconf hardware beagleplay.cfg
