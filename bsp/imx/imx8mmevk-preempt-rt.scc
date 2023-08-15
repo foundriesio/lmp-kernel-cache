@@ -7,3 +7,5 @@ include ktypes/standard/standard.scc
 include imx8mmevk.scc
 
 include ktypes/preempt-rt/preempt-rt.scc
+
+include cfg/imx-rt-rpmsg.cfg
