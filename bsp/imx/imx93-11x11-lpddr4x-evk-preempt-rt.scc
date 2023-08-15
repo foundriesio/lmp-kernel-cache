@@ -7,3 +7,5 @@ include ktypes/standard/standard.scc
 include imx93-11x11-lpddr4x-evk.scc
 
 include ktypes/preempt-rt/preempt-rt.scc
+
+include cfg/imx-rt-rpmsg.cfg
