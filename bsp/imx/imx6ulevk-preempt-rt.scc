@@ -1,6 +1,6 @@
 define KMACHINE imx6ulevk
 define KARCH arm
-define KTYPE standard
+define KTYPE preempt-rt
 
 include ktypes/standard/standard.scc
 
