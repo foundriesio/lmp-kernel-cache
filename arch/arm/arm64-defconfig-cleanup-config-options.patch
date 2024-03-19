@@ -1,0 +1,49 @@
+From 14e71de7e9d610c2ce6d2cfa064e6c392304bd38 Mon Sep 17 00:00:00 2001
+From: Ross Burton <ross@burtonini.com>
+Date: Tue, 11 Jan 2022 12:02:36 +0000
+Subject: [PATCH] arm64: defconfig: cleanup config options
+
+arm64: defconfig: drop unused POWER_AVS option
+Commit 785b5bb41b0a ("PM: AVS: Drop the avs directory and the
+corresponding Kconfig") moved AVS code to SOC-specific folders, and
+removed corresponding Kconfig from drivers/power, leaving original
+POWER_AVS config option enabled in some defconfigs.
+Remove the options, which have no references in the tree anymore.
+
+arm64: defconfig: set CONFIG_USB_CONN_GPIO=y
+Since 10a7b37b5b ("arm64: Update default configuration") PHY_TEGRA_XUSB
+is set to y. That option needs USB_CONN_GPIO to also be y not m, so
+set USB_CONN_GPIO explicitly to y to reflect reality.
+
+arm64: defconfig: remove obsolete CONFIG_ARCH_AGILEX and CONFIG_ARCH_N5X
+These config options were removed in 4a9a1a5602 ("arm64: socfpga: merge
+Agilex and N5X into ARCH_INTEL_SOCFPGA"), so remove them from the
+defconfig.
+
+arm64: defconfig: don't set CONFIG_ACPI_APEI_PCIEAER
+Since 8c8ff55 ("PCI/AER: Don't select CONFIG_PCIEAER by default"), PCIe
+Advanced Error Reporting isn't enabled by default.. As this means just
+enabling CONFIG_CPI_APEI_PCIEAR does not have an effect, remove it from
+the defconfig for clarity.
+
+Signed-off-by: Ross Burton <ross.burton@arm.com>
+Signed-off-by: Bruce Ashfield <bruce.ashfield@gmail.com>
+---
+ arch/arm64/configs/defconfig | 1 -
+ 1 file changed, 1 deletion(-)
+
+diff --git a/arch/arm64/configs/defconfig b/arch/arm64/configs/defconfig
+index 50aa3d75ab4f..cd1b2d865baf 100644
+--- a/arch/arm64/configs/defconfig
++++ b/arch/arm64/configs/defconfig
+@@ -103,7 +103,6 @@ CONFIG_QORIQ_CPUFREQ=y
+ CONFIG_ACPI=y
+ CONFIG_ACPI_APEI=y
+ CONFIG_ACPI_APEI_GHES=y
+-CONFIG_ACPI_APEI_PCIEAER=y
+ CONFIG_ACPI_APEI_MEMORY_FAILURE=y
+ CONFIG_ACPI_APEI_EINJ=y
+ CONFIG_VIRTUALIZATION=y
+-- 
+2.19.1
+

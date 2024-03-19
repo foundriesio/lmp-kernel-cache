@@ -1,0 +1,32 @@
+From 3502bc5ce0d25aae81727455869af362099c15bf Mon Sep 17 00:00:00 2001
+From: Mark Asselstine <mark.asselstine@windriver.com>
+Date: Tue, 15 Jul 2008 15:49:27 -0400
+Subject: [PATCH] arm: ARM EABI socketcall
+
+This patch make that the sys_socketcall system call is available when
+EABI is used. The reason is that the user-space applications in both
+glibc_std rootfs and glibc_small rootfs are still using sys_socketcall
+to request kernel service.
+
+Signed-off-by: Zumeng Chen <zumeng.chen@windriver.com>
+---
+ arch/arm/kernel/entry-common.S | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+diff --git a/arch/arm/kernel/entry-common.S b/arch/arm/kernel/entry-common.S
+index 7f0b7aba1498..49719a7d721c 100644
+--- a/arch/arm/kernel/entry-common.S
++++ b/arch/arm/kernel/entry-common.S
+@@ -352,7 +352,8 @@ ENTRY(\sym)
+  * With EABI a couple syscalls are obsolete and defined as sys_ni_syscall.
+  */
+ 	syscall_table_start sys_call_table
+-#ifdef CONFIG_AEABI
++
++#if defined(CONFIG_AEABI) && !defined(CONFIG_OABI_COMPAT)
+ #include <calls-eabi.S>
+ #else
+ #include <calls-oabi.S>
+-- 
+2.19.1
+
