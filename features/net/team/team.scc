@@ -1,3 +1,4 @@
-include features/net/net.scc
+# SPDX-License-Identifier: MIT
+include features/net/net-enable.scc
 
 kconf non-hardware team.cfg

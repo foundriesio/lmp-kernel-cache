@@ -1,10 +1,6 @@
+# SPDX-License-Identifier: MIT
+
 define KFEATURE_DESCRIPTION "Enable Features needed by docker in addition to LXC features"
 define KFEATURE_COMPATIBILITY board
 
-include features/namespaces/namespaces.scc
-include features/cgroups/cgroups.scc
-include features/vxlan/vxlan-enable.scc
-include features/netfilter/netfilter.scc
-include features/overlayfs/overlayfs.scc
-
-kconf non-hardware docker.cfg
+include cfg/docker.scc
