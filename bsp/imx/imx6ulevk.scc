@@ -42,7 +42,7 @@ include features/wifi/wifi-pci.scc
 include features/pwm/pwm.scc
 include features/crypto/arm-crypto.scc
 include features/power/cpu-freq.scc
-include features/tee/tee.scc
+include features/optee/optee.scc
 
 include cfg/usb-mass-storage.scc
 

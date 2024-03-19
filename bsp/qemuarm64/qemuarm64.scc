@@ -38,7 +38,7 @@ include features/usb/usb-gadgets.scc
 include features/crypto/arm64-crypto.scc
 include features/power/arm.scc
 include features/power/cpu-freq.scc
-include features/tee/tee.scc
+include features/optee/optee.scc
 
 include cfg/usb-mass-storage.scc
 

@@ -41,7 +41,7 @@ include features/usb/serial-all.scc
 include features/usb-net/usb-net.scc
 include features/pwm/pwm.scc
 include features/crypto/arm64-crypto.scc
-include features/tee/tee.scc
+include features/optee/optee.scc
 include features/kvm/qemu-kvm-enable.scc
 include features/power/cpu-freq.scc
 
