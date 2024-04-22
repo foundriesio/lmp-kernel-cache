@@ -36,6 +36,11 @@ include features/tee/tee.scc
 
 include cfg/usb-mass-storage.scc
 
+# Enable debug kernel symbols
+include cfg/debug/debug-info/debug-info.scc
+include cfg/debug/debug-info/debug-info-dwarf4.scc
+include cfg/debug/debug-info/debug-info-split.scc
+
 # Exclude x86/ACPI features
 include cfg/non-x86.cfg
 
