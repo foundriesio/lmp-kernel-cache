@@ -40,6 +40,7 @@ include cfg/usb-mass-storage.scc
 include cfg/debug/debug-info/debug-info.scc
 include cfg/debug/debug-info/debug-info-dwarf4.scc
 include cfg/debug/debug-info/debug-info-split.scc
+include cfg/debug/debug-info/debug-gdbscripts.cfg
 
 # Exclude x86/ACPI features
 include cfg/non-x86.cfg
