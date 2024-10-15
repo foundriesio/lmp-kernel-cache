@@ -1,0 +1,13 @@
+include features/crypto/arm64-crypto.scc
+
+include raspberrypi-common.scc
+
+include features/pci/pci.scc
+
+# VIRT support
+include cfg/paravirt_kvm.scc
+include cfg/virtio.scc
+include features/vfio/vfio.scc
+include features/kvm/qemu-kvm-enable.scc
+
+kconf hardware raspberrypi5.cfg

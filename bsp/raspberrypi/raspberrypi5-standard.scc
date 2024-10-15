@@ -1,0 +1,7 @@
+define KMACHINE raspberrypi5
+define KARCH arm64
+define KTYPE standard
+
+include ktypes/standard/standard.scc
+
+include raspberrypi5.scc
